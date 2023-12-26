@@ -1,0 +1,140 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+/*.bg {
+  background-color: rgb(0, 56, 239);
+}*/
+
+.colbg {
+  background-color: yellow;
+}
+
+.nav p:hover {
+  background-color: #555;
+}
+
+/* nav ul li{
+  width: 19.6rem;
+  border: 1px solid black;
+} */
+input {
+  margin: 9px 0;
+}
+
+.form-control {
+  width: 100%;
+}
+
+#form1 {
+  width: 100%;
+}
+
+.less {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+}
+
+.less::after {
+  content: 'back';
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  left: 100%;
+  transform: translate(0%, -50%);
+  opacity: 0;
+  transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.less:hover::after {
+  right: 0;
+  opacity: 1;
+}
+
+
+
+.hint-icon {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
+
+.hint-text {
+  display: none;
+  margin-top: 5px;
+}
+
+/* Style for icons inside input boxes */
+.input-group i {
+  position: absolute;
+  right: 0.1em;
+  top: calc(50% - 0.9em);
+  z-index: 1;
+}
+
+/* Adjust input padding to make room for the icon */
+
+/* Flexbox style for labels and inputs */
+
+
+
+
+.form-group .input-group {
+  flex: 3;
+  position: relative;
+}
+
+.form-check-input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid darkgray;
+  border-radius: 4px;
+  outline: none;
+  margin-right: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.form-check-input[type="radio"]:checked {
+  background-color: #007bff;
+}
+
+.form-check-input[type="radio"]:checked::before {
+  /* content: "\2713"; */
+  display: block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn:disabled {
+  pointer-events: none;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: blue;
+  font-size: x-large;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}

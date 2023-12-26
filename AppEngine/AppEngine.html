@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>DevOps Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Author Thamizhenthi">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/4723418bde.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+</head>
+<link rel="stylesheet" href="AppEngine.css">
+
+<body>
+  <div class="container-fluid">
+    <div class="row sticky-top" style="background-color: #0447C8">
+      <div class="col-3" style="height: 100px; padding-left:40px;">
+        <h3 class="text-center mt-2 less">
+          <svg id="Component_9_1" data-name="Component 9 – 1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="40" viewBox="0 0 41 65">
+            <defs>
+              <clipPath id="clip-path">
+                <rect x="-2" width="41" height="65" fill="none" />
+              </clipPath>
+            </defs>
+            <g id="Scroll_Group_2" data-name="Scroll Group 2" transform="translate(2)" clip-path="url(#clip-path)"
+              style="isolation: isolate">
+              <path id="Icon_ionic-ios-arrow-back" data-name="Icon ionic-ios-arrow-back"
+                d="M21.677,36.436,44.569,13.562a4.324,4.324,0,0,0-6.124-6.106L12.51,33.374a4.315,4.315,0,0,0-.126,5.962l26.043,26.1a4.324,4.324,0,1,0,6.124-6.106Z"
+                transform="translate(-11.251 -6.194)" fill="white" />
+              <text id="Back" transform="translate(40 49)" fill="white" font-size="47"
+                font-family="Poppins-Medium, Poppins" font-weight="500">
+                <tspan x="0" y="0">Back</tspan>
+              </text>
+            </g>
+          </svg>
+        </h3>
+
+      </div>
+      <div class="col d-flex align-items-center justify-content-center">
+        <h3 class="text-white mt-2">Google Cloud Platform</h3>
+      </div>
+    </div>
+    <div class="row"
+      style="border-bottom: 2px solid darkgray;position: -webkit-sticky;position: sticky;top: 100px;z-index: 2;">
+      <div class="col-3 bg-white">
+        <!-- <input type="search" style="border: 2px solid darkgray" placeholder="Search" id="form1" class="form-control" -->
+        <input type="search" style="border: 2px solid black" placeholder="              Search" id="form1"
+          class="form-control">
+      </div>
+      <div class="col" style="background-color:white;">
+        <h3 class="text-center mt-3 text-primary">App Engine</h3>
+      </div>
+    </div>
+    <div class="row">
+      <nav class="col-3 navbar navbar-expand-lg navbar-light bg-light border-secondary"
+        style="align-items: start; padding:0.8rem; border-right: 1px solid black;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav flex-column nav">
+            <li class=" row nav-item lii border-bottom border-secondary active">
+              <img src="../Image/GCP/virtual_private_cloud/virtual_private_cloud.png" class="col-md-2 rounded float-left"
+                alt="...">
+              <a class=" col-md nav-item nav-link fs-5 text-start action " href="#">Virtual Private Cloud</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/cloud_storage/cloud_storage.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-5 text-start action " href="CloudRun.html">Cloud Run</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/compute_engine/compute_engine.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-5 text-start action " href="#">Compute Engine</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/cloud_sql/cloud_sql.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-5 text-start action " href="#">Cloud SQL</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/cloud_storage/cloud_storage.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-5 text-start action " href="#">Cloud Storage</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/kuberun/kuberun.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-5 text-start action " href="#">Kubernetes Cluster</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/app_engine/app_engine.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-5 text-start action " href="#">App Engine</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/cloud_functions/cloud_functions.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-5 text-start action " href="#">Cloud Function</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/bigquery/bigquery.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-5 text-start action " href="#">BigQuery</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/artifact_registry/artifact_registry.png" class="col-md-2 rounded float-left"
+                alt="...">
+              <a class=" col-md nav-item nav-link fs-5 text-start action " href="#">Artifact Registry</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/cloud_spanner/cloud_spanner.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-5 text-start action " href="#">Cloud Spanner</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/vmware_engine/vmware_engine.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-5 text-start action " href="#">VMware Cluster</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/transfer/transfer.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-5 text-start action " href="#">Storage Transfer</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="col" style="background-color:white;">
+        <form class="col-10 mt-3 mx-auto" id="myForm" onsubmit="return validateForm()">
+
+          <!-- Text Input -->
+          <div class="form-group row d-block d-sm-flex align-items-center justify-content-center">
+            <label for="reponame" class="form-label col-sm-3">Repository Name</label>
+            <div class="col-sm-5">
+              <div class="input-group">
+                <input type="text" class="form-control" id="reponame" style="border-radius: 5px;"
+                  onkeyup="repository(this)">
+                <i class="fas fa-info-circle input-group-text hint-icon fs-5" onclick="toggleHint('reponame')"></i>
+              </div>
+              <div id="reponameHint" class="hint-text text-muted" data-visible="false">Enter your full name.</div>
+              <div id="reponameError" class="text-danger"></div>
+            </div>
+          </div>
+          <div class="form-group row d-block d-sm-flex align-items-center justify-content-center">
+            <label for="pat" class="form-label col-sm-3">Personal Access Token</label>
+            <div class="col-5">
+              <div class="input-group">
+                <input type="text" class="form-control" id="pat" style="border-radius: 5px;"
+                  onkeyup="PersonalAccessToken(this)">
+                <i class="fas fa-info-circle input-group-text hint-icon fs-5" onclick="toggleHint('pat')"></i>
+              </div>
+              <div id="patHint" class="hint-text text-muted" data-visible="false">Enter your full name.</div>
+              <div id="patError" class="text-danger"></div>
+            </div>
+          </div>
+
+          <!-- Dropdown Input -->
+          <div class="form-group row d-block d-sm-flex align-items-center justify-content-center">
+            <label for="region" class="form-label col-sm-3">Region</label>
+            <div class="col-sm-5">
+              <div class="input-group">
+                <select class="form-select" autocomplete="off" id="region" style="border-radius: 5px;"
+                  onkeyup="region(this)">
+                  <option value="" style="display:none;"></option>
+                  <option name="option" value="us-west-1">us-west-1</option>
+                  <option name="option" value="asia-south1">asia-south1</option>
+                  <option name="option" value="asia-south2">asia-south2</option>
+                  <option name="option" value="asia-east1">asia-east1</option>
+                  <option name="option" value="asia-east2">asia-east2</option>
+                  <option name="option" value="asia-northeast1">
+                    asia-northeast1
+                  </option>
+                  <option name="option" value="asia-northeast1">
+                    asia-northeast1
+                  </option>
+                  <option name="option" value="asia-northeast3">
+                    asia-northeast3
+                  </option>
+                  <option name="option" value="asia-southeast1">
+                    asia-southeast1
+                  </option>
+                  <option name="option" value="australia-southeast1">
+                    australia-southeast1
+                  </option>
+                  <option name="option" value="australia-southeast2">
+                    australia-southeast2
+                  </option>
+                  <option name="option" value="europe-central2">
+                    europe-central2
+                  </option>
+                  <option name="option" value="europe-north2">
+                    europe-north2
+                  </option>
+                  <option name="option" value="europe-southwest1">
+                    europe-southwest1
+                  </option>
+                  <option name="option" value="europe-west1">
+                    europe-west1
+                  </option>
+                  <option name="option" value="europe-west2">
+                    europe-west2
+                  </option>
+                  <option name="option" value="europe-west3">
+                    europe-west3
+                  </option>
+                  <option name="option" value="europe-west4">
+                    europe-west4
+                  </option>
+                  <option name="option" value="europe-west5">
+                    europe-west5
+                  </option>
+                  <option name="option" value="europe-west6">
+                    europe-west6
+                  </option>
+                  <option name="option" value="europe-west8">
+                    europe-west8
+                  </option>
+                  <option name="option" value="europe-west9">
+                    europe-west9
+                  </option>
+                  <option name="option" value="northamerica-northeast1">
+                    northamerica-northeast1
+                  </option>
+                  <option name="option" value="northamerica-northeast2">
+                    northamerica-northeast2
+                  </option>
+                  <option name="option" value="southamerica-east1">
+                    southamerica-east1
+                  </option>
+                  <option name="option" value="us-central1">us-central1</option>
+                  <option name="option" value="us-east1">us-east1</option>
+                  <option name="option" value="us-east4">us-east4</option>
+                  <option name="option" value="us-west1">us-west1</option>
+                  <option name="option" value="us-west2">us-west2</option>
+                  <option name="option" value="us-west3">us-west3</option>
+                  <option name="option" value="us-west4">us-west4</option>
+                </select>
+                <div class="">
+                  <i class="fas fa-info-circle input-group-text hint-icon me-4 fs-5" onclick="toggleHint('region')"></i>
+                </div>
+              </div>
+              <div id="regionHint" class="hint-text text-muted" data-visible="false">Select your gender.</div>
+              <div id="regionError" class="text-danger"></div>
+            </div>
+          </div>
+          <div class="form-group row d-block pt-2 d-sm-flex align-items-center justify-content-center">
+            <label for="zone" class="form-label col-sm-3">Zone</label>
+            <div class="col-sm-5">
+              <div class="input-group">
+                <select class="form-select" id="zone" style="border-radius: 5px;" onkeyup="zone(this)">
+                  <option value="" style="display:none"></option>
+                  <option name="option" value="us-west1">us-west1</option>
+                  <option name="option" value="us-west1">us-west1</option>
+                  <option name="option" value="us-west2">us-west2</option>
+                  <option name="option" value="us-west3">us-west3</option>
+                  <option name="option" value="asia-south1-a">
+                    asia-south1-a
+                  </option>
+                  <option name="option" value="asia-south1-b">
+                    asia-south1-b
+                  </option>
+                  <option name="option" value="asia-south1-c">
+                    asia-south1-c
+                  </option>
+                  <option name="option" value="asia-south2-a">
+                    asia-south2-a
+                  </option>
+                  <option name="option" value="asia-south2-b">
+                    asia-south2-b
+                  </option>
+                  <option name="option" value="asia-south2-c">
+                    asia-south2-c
+                  </option>
+                  <option name="option" value="asia-east1-a">asia-east1-a</option>
+                  <option name="option" value="asia-east1-b">asia-east1-b</option>
+                  <option name="option" value="asia-east1-c">asia-east1-c</option>
+                  <option name="option" value="asia-east2-a">asia-east2-a</option>
+                  <option name="option" value="asia-east2-b">asia-east2-b</option>
+                  <option name="option" value="asia-east2-c">asia-east2-c</option>
+                  <option name="option" value="asia-northeast1-a">
+                    asia-northeast1-a
+                  </option>
+                  <option name="option" value="asia-northeast1-b">
+                    asia-northeast1-b
+                  </option>
+                  <option name="option" value="asia-northeast1-c">
+                    asia-northeast1-c
+                  </option>
+                  <option name="option" value="asia-northeast2-a">
+                    asia-northeast2-a
+                  </option>
+                  <option name="option" value="asia-northeast2-b">
+                    asia-northeast2-b
+                  </option>
+                  <option name="option" value="asia-northeast2-c">
+                    asia-northeast2-c
+                  </option>
+                  <option name="option" value="asia-northeast3-a">
+                    asia-northeast3-a
+                  </option>
+                  <option name="option" value="asia-northeast3-b">
+                    asia-northeast3-b
+                  </option>
+                  <option name="option" value="asia-northeast3-c">
+                    asia-northeast3-c
+                  </option>
+                  <option name="option" value="asia-southeast1-a">
+                    asia-southeast1-a
+                  </option>
+                  <option name="option" value="asia-southeast1-b">
+                    asia-southeast1-b
+                  </option>
+                  <option name="option" value="asia-southeast1-c">
+                    asia-southeast1-c
+                  </option>
+                  <option name="option" value="australia-southeast1-a">
+                    australia-southeast1-a
+                  </option>
+                  <option name="option" value="australia-southeast1-b">
+                    australia-southeast1-b
+                  </option>
+                  <option name="option" value="australia-southeast1-c">
+                    australia-southeast1-c
+                  </option>
+                  <option name="option" value="australia-southeast1-a">
+                    australia-southeast1-a
+                  </option>
+                  <option name="option" value="australia-southeast1-b">
+                    australia-southeast1-b
+                  </option>
+                  <option name="option" value="australia-southeast1-c">
+                    australia-southeast1-c
+                  </option>
+                  <option name="option" value="europe-central2-a">
+                    europe-central2-a
+                  </option>
+                  <option name="option" value="europe-central2-b">
+                    europe-central2-b
+                  </option>
+                  <option name="option" value="europe-central2-c">
+                    europe-central2-c
+                  </option>
+                  <option name="option" value="europe-north2-a">
+                    europe-north2-a
+                  </option>
+                  <option name="option" value="europe-north2-b">
+                    europe-north2-b
+                  </option>
+                  <option name="option" value="europe-north2-c">
+                    europe-north2-c
+                  </option>
+                  <option name="option" value="europe-southwest1-a">
+                    europe-southwest1-a
+                  </option>
+                  <option name="option" value="europe-southwest1-b">
+                    europe-southwest1-b
+                  </option>
+                  <option name="option" value="europe-southwest1-c">
+                    europe-southwest1-c
+                  </option>
+                  <option name="option" value="europe-west1-b">
+                    europe-west1-b
+                  </option>
+                  <option name="option" value="europe-west1-c">
+                    europe-west1-c
+                  </option>
+                  <option name="option" value="europe-west1-d">
+                    europe-west1-d
+                  </option>
+                  <option name="option" value="europe-west2-a">
+                    europe-west2-a
+                  </option>
+                  <option name="option" value="europe-west2-b">
+                    europe-west2-b
+                  </option>
+                  <option name="option" value="europe-west2-c">
+                    europe-west2-c
+                  </option>
+                  <option name="option" value="europe-west3-a">
+                    europe-west3-a
+                  </option>
+                  <option name="option" value="europe-west3-b">
+                    europe-west3-b
+                  </option>
+                  <option name="option" value="europe-west3-c">
+                    europe-west3-c
+                  </option>
+                  <option name="option" value="europe-west3-a">
+                    europe-west3-a
+                  </option>
+                  <option name="option" value="europe-west3-b">
+                    europe-west3-b
+                  </option>
+                  <option name="option" value="europe-west3-c">
+                    europe-west3-c
+                  </option>
+                  <option name="option" value="europe-west4-a">
+                    europe-west4-a
+                  </option>
+                  <option name="option" value="europe-west4-b">
+                    europe-west4-b
+                  </option>
+                  <option name="option" value="europe-west4-c">
+                    europe-west4-c
+                  </option>
+                  <option name="option" value="europe-west6-a">
+                    europe-west6-a
+                  </option>
+                  <option name="option" value="europe-west6-b">
+                    europe-west6-b
+                  </option>
+                  <option name="option" value="europe-west6-c">
+                    europe-west6-c
+                  </option>
+                  <option name="option" value="europe-west8-a">
+                    europe-west8-a
+                  </option>
+                  <option name="option" value="europe-west8-b">
+                    europe-west8-b
+                  </option>
+                  <option name="option" value="europe-west8-c">
+                    europe-west8-c
+                  </option>
+                  <option name="option" value="europe-west9-a">
+                    europe-west9-a
+                  </option>
+                  <option name="option" value="europe-west9-b">
+                    europe-west9-b
+                  </option>
+                  <option name="option" value="europe-west9-c">
+                    europe-west9-c
+                  </option>
+                  <option name="option" value="northamerica-northeast1-a">
+                    northamerica-northeast1-a
+                  </option>
+                  <option name="option" value="northamerica-northeast1-b">
+                    northamerica-northeast1-b
+                  </option>
+                  <option name="option" value="northamerica-northeast1-c">
+                    northamerica-northeast1-c
+                  </option>
+                  <option name="option" value="northamerica-northeast2-a">
+                    northamerica-northeast2-a
+                  </option>
+                  <option name="option" value="northamerica-northeast2-b">
+                    northamerica-northeast2-b
+                  </option>
+                  <option name="option" value="northamerica-northeast2-c">
+                    northamerica-northeast2-c
+                  </option>
+                  <option name="option" value="southamerica-east1-a">
+                    southamerica-east1-a
+                  </option>
+                  <option name="option" value="southamerica-east1-b">
+                    southamerica-east1-b
+                  </option>
+                  <option name="option" value="southamerica-east1-c">
+                    southamerica-east1-c
+                  </option>
+                  <option name="option" value="us-central1-a">
+                    us-central1-a
+                  </option>
+                  <option name="option" value="us-central1-b">
+                    us-central1-b
+                  </option>
+                  <option name="option" value="us-central1-c">
+                    us-central1-c
+                  </option>
+                  <option name="option" value="us-east1-b">us-east1-b</option>
+                  <option name="option" value="us-east1-c">us-east1-c</option>
+                  <option name="option" value="us-east1-d">us-east1-d</option>
+                  <option name="option" value="us-east4-a">us-east4-a</option>
+                  <option name="option" value="us-east4-b">us-east4-b</option>
+                  <option name="option" value="us-east4-c">us-east4-c</option>
+                  <option name="option" value="us-west1-a">us-west1-a</option>
+                  <option name="option" value="us-west1-b">us-west1-b</option>
+                  <option name="option" value="us-west1-c">us-west1-c</option>
+                  <option name="option" value="us-west2-a">us-west2-a</option>
+                  <option name="option" value="us-west2-b">us-west2-b</option>
+                  <option name="option" value="us-west2-c">us-west2-c</option>
+                  <option name="option" value="us-west3-a">us-west3-a</option>
+                  <option name="option" value="us-west3-b">us-west3-b</option>
+                  <option name="option" value="us-west3-c">us-west3-c</option>
+                  <option name="option" value="us-west4-a">us-west4-a</option>
+                  <option name="option" value="us-west4-b">us-west4-b</option>
+                  <option name="option" value="us-west4-c">us-west4-c</option>
+                </select>
+                <div class="">
+                  <i class="fas fa-info-circle input-group-text hint-icon me-4 fs-5" onclick="toggleHint('zone')"></i>
+                </div>
+              </div>
+              <div id="zoneHint" class="hint-text text-muted" data-visible="false">Select your gender.</div>
+              <div id="zoneError" class="text-danger"></div>
+            </div>
+          </div>
+          <div class="form-group row d-block d-sm-flex align-items-center justify-content-center">
+            <label for="servicename" class="form-label col-sm-3">Service Name</label>
+            <div class="col-sm-5">
+              <div class="input-group">
+                <input type="text" class="form-control" id="servicename" style="border-radius: 5px;"
+                  onkeyup="validateProductName(this)">
+                <i class="fas fa-info-circle input-group-text hint-icon fs-5" onclick="toggleHint('servicename')"></i>
+              </div>
+              <div id="servicenameHint" class="hint-text text-muted" data-visible="false">Enter your full name.</div>
+              <div id="servicenameError" class="text-danger"></div>
+            </div>
+          </div>
+          <div class="form-group row d-block d-sm-flex align-items-center justify-content-center">
+            <label for="runtime" class="form-label col-sm-3">Runtime</label>
+            <div class="col-sm-5">
+              <div class="input-group">
+                <select class="form-select" id="runtime" style="border-radius: 5px;" onkeyup="runtime(this)">
+                  <option value="" style="display:none;"></option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+                <div class="">
+                  <i class="fas fa-info-circle input-group-text hint-icon fs-5 me-4"
+                    onclick="toggleHint('runtime')"></i>
+                </div>
+              </div>
+              <div id="runtimeHint" class="hint-text text-muted" data-visible="false">Select your gender.</div>
+              <div id="runtimeError" class="text-danger"></div>
+            </div>
+          </div>
+          <div class="form-group row d-block d-sm-flex align-items-center justify-content-center">
+            <label for="shell" class="form-label col-sm-3">Shell</label>
+            <div class="col-sm-5">
+              <div class="input-group">
+                <input type="text" class="form-control" id="shell" style="border-radius: 5px;" onkeyup="fmshell(this)">
+                <i class="fas fa-info-circle input-group-text hint-icon fs-5" onclick="toggleHint('shell')"></i>
+              </div>
+              <div id="shellHint" class="hint-text text-muted" data-visible="false">Enter your full name.</div>
+              <div id="shellError" class="text-danger"></div>
+            </div>
+          </div>
+          <div class="form-group row d-block d-sm-flex align-items-center justify-content-center">
+            <label for="bucket" class="form-label col-sm-3">Bucket URL</label>
+            <div class="col-sm-5">
+              <div class="input-group">
+                <input type="text" class="form-control" id="bucket" style="border-radius: 5px;"
+                  onkeyup="bucketurl(this)">
+                <i class="fas fa-info-circle input-group-text hint-icon fs-5" onclick="toggleHint('bucket')"></i>
+              </div>
+              <div id="bucketHint" class="hint-text text-muted" data-visible="false">Enter your full name.</div>
+              <div id="bucketError" class="text-danger"></div>
+            </div>
+          </div>
+          <!-- Radio Buttons -->
+          <fieldset class="form-group row d-block d-sm-flex align-items-center justify-content-center">
+            <label class="form-label col-sm-3" for="Regional">Routing Mode</label>
+            <div class="col-sm-5">
+              <div class="input-group">
+                <div class="form-check me-4 ms-3">
+                  <input class="form-check-input mt-1" type="radio" name="status" id="Regional" value="Regional">
+                  <label class="form-check-label" for="Regional">Regional</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input mt-1" type="radio" name="status" id="Global" value="Global">
+                  <label class="form-check-label" for="Global">Global</label>
+                </div>
+                <i class="fas fa-info-circle input-group-text hint-icon fs-5" onclick="toggleHint('status')"></i>
+              </div>
+              <div id="statusHint" class="hint-text text-muted" data-visible="false">Choose your relationship status.
+              </div>
+              <div id="statusError" class="text-danger"></div>
+            </div>
+          </fieldset>
+          <!-- File Upload -->
+          <div class="form-group row d-block d-md-flex align-items-center justify-content-center">
+            <label for="file" class="form-label col-sm-3">Startup Script</label>
+            <div class="col-sm-5">
+              <div class="input-group">
+                <input type="file" style="border-radius: 5px;height: 40px;" class="form-control" id="file"
+                  accept=".pdf, .doc, .docx">
+                <i class="fas fa-info-circle input-group-text hint-icon fs-5" onclick="toggleHint('file')"></i>
+              </div>
+              <div id="fileHint" class="hint-text text-muted" data-visible="false">Upload a PDF, DOC, or DOCX file.
+              </div>
+              <div id="fileError" class="text-danger"></div>
+            </div>
+          </div>
+
+
+          <!-- Submit Button -->
+          <div class="form-group row justify-content-center mt-4">
+            <div class="col-sm-8">
+              <button type="submit" class="col w-100 btn btn-outline-primary"
+                style="box-shadow: 1px 2px 5px #000000;">Create</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="AppEngine.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

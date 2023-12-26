@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/4723418bde.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  .bg {
+    background-color: rgb(0, 56, 239);
+  }
+
+  .colbg {
+    background-color: yellow;
+  }
+
+  .nav p:hover {
+    background-color: #555;
+  }
+
+  /* nav ul li{
+    width: 19.6rem;
+    border: 1px solid black;
+  } */
+  input {
+    margin: 9px 0;
+  }
+
+  .form-control {
+    width: 100%;
+  }
+
+  #form1 {
+    width: 100%;
+  }
+
+  .less {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .less::after {
+    content: 'back';
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    left: 100%;
+    transform: translate(0%, -50%);
+    opacity: 0;
+    transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+
+  .less:hover::after {
+    right: 0;
+    opacity: 1;
+  }
+
+  /* Form validation */
+  .custom-file-input::after {
+    content: 'Browse';
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    color: #495057;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+  }
+
+  .custom-file-input:hover::after {
+    border-color: #007bff;
+  }
+
+  .custom-file-input:focus::after {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+
+  .hint-icon {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .hint-text {
+    display: none;
+    margin-top: 5px;
+  }
+
+  /* Style for icons inside input boxes */
+  .input-group i {
+    position: absolute;
+    right: 0.1em;
+    top: calc(50% - 0.9em);
+    z-index: 1;
+  }
+
+  /* Adjust input padding to make room for the icon */
+  .input-group .form-control {
+    padding-right: 2.5em;
+    /* Adjust as needed */
+  }
+
+  /* Flexbox style for labels and inputs */
+  .form-group {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    flex: 1;
+    text-align: left;
+    margin-top: calc(0.375rem + 1px);
+  }
+
+  .form-group .input-group {
+    flex: 3;
+    position: relative;
+  }
+  .form-check-input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid darkgray;
+    border-radius: 4px;
+    outline: none;
+    margin-right: 5px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .form-check-input[type="radio"]:checked {
+    background-color: #007bff;
+  }
+
+  .form-check-input[type="radio"]:checked::before {
+    /* content: "\2713"; */
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  
+</style>
+
+<body>
+  <div class="container-fluid">
+    <div class="row bg sticky-top">
+      <div class="col-3" style="height: 100px; padding-left:40px;">
+        <h3 class="text-center mt-2 less">
+          <svg id="Component_9_1" data-name="Component 9 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="40" viewBox="0 0 41 65">
+            <defs>
+              <clipPath id="clip-path">
+                <rect x="-2" width="41" height="65" fill="none"/>
+              </clipPath>
+            </defs>
+            <g id="Scroll_Group_2" data-name="Scroll Group 2" transform="translate(2)" clip-path="url(#clip-path)" style="isolation: isolate">
+              <path id="Icon_ionic-ios-arrow-back" data-name="Icon ionic-ios-arrow-back" d="M21.677,36.436,44.569,13.562a4.324,4.324,0,0,0-6.124-6.106L12.51,33.374a4.315,4.315,0,0,0-.126,5.962l26.043,26.1a4.324,4.324,0,1,0,6.124-6.106Z" transform="translate(-11.251 -6.194)" fill="white"/>
+              <text id="Back" transform="translate(40 49)" fill="white" font-size="47" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Back</tspan></text>
+            </g>
+          </svg>
+        </h3>
+
+      </div>
+      <div class="col d-flex align-items-center justify-content-center" style="height: 50px;padding-right: 18rem;">
+        <h3 class="text-white mt-5">Google Cloud Platform</h3>
+      </div>
+    </div>
+    <div class="row" style="border-bottom: 2px solid darkgray;position: -webkit-sticky;position: sticky;top: 100px;z-index: 2;">
+      <div class="col-3 bg-white">
+        <!-- <input type="search" style="border: 2px solid darkgray" placeholder="Search" id="form1" class="form-control" -->
+        <input type="search" style= "border: 2px solid black" placeholder="              Search" id="form1" class="form-control" >
+      </div>
+      <div class="col" style="background-color:white;">
+        <h3 class="text-center mt-3 text-primary">Storage Transfer</h3>
+      </div>
+    </div>
+    <div class="row">
+        <nav class="col-3 navbar navbar-expand-lg navbar-light bg-light border border-secondary" style="align-items: start; padding:0.8rem; display: flex; position: fixed;">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav flex-column nav">
+<li class=" row nav-item lii border-bottom border-secondary active">
+<img src="Image/GCP/virtual_private_cloud/virtual_private_cloud.png" class="col-md-2 rounded float-left"  alt="...">
+<a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Virtual Private Cloud</a>
+<img src="Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+</li>
+<li class="row nav-item lii border-bottom border-secondary">
+<img src="Image/GCP/cloud_storage/cloud_storage.png" class="col-md-2 rounded float-left"  alt="...">
+<a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Cloud Run</a>
+<img src="Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+</li>
+<li class="row nav-item lii border-bottom border-secondary">
+<img src="Image/GCP/compute_engine/compute_engine.png" class="col-md-2 rounded float-left"  alt="...">
+<a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Compute Engine</a>
+<img src="Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+</li>
+<li class="row nav-item lii border-bottom border-secondary">
+<img src="Image/GCP/cloud_sql/cloud_sql.png" class="col-md-2 rounded float-left"  alt="...">
+<a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Cloud SQL</a>
+<img src="Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+</li>
+<li class="row nav-item lii border-bottom border-secondary">
+<img src="Image/GCP/cloud_storage/cloud_storage.png" class="col-md-2 rounded float-left"  alt="...">
+<a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Cloud Storage</a>
+<img src="Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+</li>
+<li class="row nav-item lii border-bottom border-secondary">
+<img src="Image/GCP/kuberun/kuberun.png" class="col-md-2 rounded float-left"  alt="...">
+<a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Kubernetes Cluster</a>
+<img src="Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+</li>
+<li class="row nav-item lii border-bottom border-secondary">
+<img src="Image/GCP/app_engine/app_engine.png" class="col-md-2 rounded float-left"  alt="...">
+<a class=" col-md nav-item nav-link fs-4 text-start action " href="#">App Engine</a>
+<img src="Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+</li>
+<li class="row nav-item lii border-bottom border-secondary">
+<img src="Image/GCP/cloud_functions/cloud_functions.png" class="col-md-2 rounded float-left"  alt="...">
+<a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Cloud Function</a>
+<img src="Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+</li>
+<li class="row nav-item lii border-bottom border-secondary">
+<img src="Image/GCP/bigquery/bigquery.png" class="col-md-2 rounded float-left"  alt="...">
+<a class=" col-md nav-item nav-link fs-4 text-start action " href="#">BigQuery</a>
+<img src="Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+</li>
+<li class="row nav-item lii border-bottom border-secondary">
+<img src="Image/GCP/artifact_registry/artifact_registry.png" class="col-md-2 rounded float-left"  alt="...">
+<a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Artifact Registry</a>
+<img src="Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+</li>
+<li class="row nav-item lii border-bottom border-secondary">
+<img src="Image/GCP/cloud_spanner/cloud_spanner.png" class="col-md-2 rounded float-left"  alt="...">
+<a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Cloud Spanner</a>
+<img src="Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+</li>
+<li class="row nav-item lii border-bottom border-secondary">
+<img src="Image/GCP/vmware_engine/vmware_engine.png" class="col-md-2 rounded float-left"  alt="...">
+<a class=" col-md nav-item nav-link fs-4 text-start action " href="#">VMware Cluster</a>
+<img src="Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+</li>
+<li class="row nav-item lii">
+<img src="Image/GCP/transfer/transfer.png" class="col-md-2 rounded float-left"  alt="...">
+<a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Storage Transfer</a>
+<img src="Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+</li>
+</ul>
+</div>
+</nav>
+      <div class="col" style="background-color:white;">
+        <form class="col-7 mt-5 mx-auto" id="myForm" style="padding-left: 16rem;" onsubmit="validateForm(); return false;">
+
+          <!-- Text Input -->
+          <div class="form-group d-block d-sm-flex align-items-center">
+            <label for="name" class="form-label">Repository Name</label>
+            <div class="col">
+              <div class="input-group">
+                <input type="text" class="form-control" id="name" style="border-radius: 5px;">
+                <i class="fas fa-info-circle input-group-text hint-icon" onclick="toggleHint('name')"></i>
+              </div>
+              <div id="nameHint" class="hint-text text-muted" data-visible="false">Enter your full name.</div>
+              <div id="nameError" class="text-danger"></div>
+            </div>
+          </div>
+          <div class="form-group d-block d-sm-flex align-items-center">
+            <label for="name" class="form-label">Personal Access Token</label>
+            <div class="col">
+              <div class="input-group">
+                <input type="text" class="form-control" id="name" style="border-radius: 5px;">
+                <i class="fas fa-info-circle input-group-text hint-icon" onclick="toggleHint('name')"></i>
+              </div>
+              <div id="nameHint" class="hint-text text-muted" data-visible="false">Enter your full name.</div>
+              <div id="nameError" class="text-danger"></div>
+            </div>
+          </div>
+
+          <!-- Dropdown Input -->
+          <div class="form-group d-block d-sm-flex">
+            <label for="gender" class="form-label">Region</label>
+            <div class="col">
+              <div class="input-group">
+                <select class="form-select" id="gender" style="border-radius: 5px;">
+                  <option value="" disabled selected>Select Region</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+                <div class="">
+                  <i class="fas fa-info-circle input-group-text hint-icon me-3" onclick="toggleHint('gender')"></i>
+                </div>
+              </div>
+              <div id="genderHint" class="hint-text text-muted" data-visible="false">Select your gender.</div>
+              <div id="genderError" class="text-danger"></div>
+            </div>
+          </div>
+          <div class="form-group d-block d-sm-flex">
+            <label for="gender" class="form-label">Zone</label>
+            <div class="col">
+              <div class="input-group">
+                <select class="form-select" id="gender" style="border-radius: 5px;">
+                  <option value="" disabled selected>Select Zone</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+                <div class="">
+                  <i class="fas fa-info-circle input-group-text hint-icon me-3" onclick="toggleHint('gender')"></i>
+                </div>
+              </div>
+              <div id="genderHint" class="hint-text text-muted" data-visible="false">Select your gender.</div>
+              <div id="genderError" class="text-danger"></div>
+            </div>
+          </div>
+          <div class="form-group d-block d-sm-flex align-items-center">
+            <label for="name" class="form-label">Source Bucket Name</label>
+            <div class="col">
+              <div class="input-group">
+                <input type="text" class="form-control" id="name" style="border-radius: 5px;">
+                <i class="fas fa-info-circle input-group-text hint-icon" onclick="toggleHint('name')"></i>
+              </div>
+              <div id="nameHint" class="hint-text text-muted" data-visible="false">Enter your full name.</div>
+              <div id="nameError" class="text-danger"></div>
+            </div>
+          </div>
+          <div class="form-group d-block d-sm-flex align-items-center">
+            <label for="name" class="form-label">Destination Bucket Name</label>
+            <div class="col">
+              <div class="input-group">
+                <input type="text" class="form-control" id="name" style="border-radius: 5px;">
+                <i class="fas fa-info-circle input-group-text hint-icon" onclick="toggleHint('name')"></i>
+              </div>
+              <div id="nameHint" class="hint-text text-muted" data-visible="false">Enter your full name.</div>
+              <div id="nameError" class="text-danger"></div>
+            </div>
+          </div>
+          
+
+          <!-- Radio Buttons -->
+          <fieldset class="form-group d-block d-sm-flex">
+            <label class="form-label">Source Object Delete</label>
+            <div class="col">
+              <div class="input-group">
+                <div class="form-check me-4 ms-3">
+                  <input class="form-check-input mt-2" type="radio" name="status" id="single" value="single">
+                  <label class="form-check-label" for="single">True</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input mt-2" type="radio" name="status" id="married" value="married">
+                  <label class="form-check-label" for="married">False</label>
+                </div>
+                <i class="fas fa-info-circle input-group-text hint-icon" onclick="toggleHint('status')"></i>
+              </div>
+              <div id="statusHint" class="hint-text text-muted" data-visible="false">Choose your relationship status.
+              </div>
+              <div id="statusError" class="text-danger"></div>
+            </div>
+          </fieldset>
+          <fieldset class="form-group d-block d-sm-flex">
+            <label class="form-label">Sink Object Delete</label>
+            <div class="col">
+              <div class="input-group">
+                <div class="form-check me-4 ms-3">
+                  <input class="form-check-input mt-2" type="radio" name="status" id="single" value="single">
+                  <label class="form-check-label" for="single">True</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input mt-2" type="radio" name="status" id="married" value="married">
+                  <label class="form-check-label" for="married">False</label>
+                </div>
+                <i class="fas fa-info-circle input-group-text hint-icon" onclick="toggleHint('status')"></i>
+              </div>
+              <div id="statusHint" class="hint-text text-muted" data-visible="false">Choose your relationship status.
+              </div>
+              <div id="statusError" class="text-danger"></div>
+            </div>
+          </fieldset>
+          <div class="form-group d-block d-sm-flex align-items-center">
+            <label for="name" class="form-label">Month/Date/Year</label>
+            <div class="col">
+              <div class="input-group">
+                <input type="text" class="form-control" id="name" style="border-radius: 5px;">
+                <i class="fas fa-info-circle input-group-text hint-icon" onclick="toggleHint('name')"></i>
+              </div>
+              <div id="nameHint" class="hint-text text-muted" data-visible="false">Enter your full name.</div>
+              <div id="nameError" class="text-danger"></div>
+            </div>
+          </div>
+          
+          
+
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Add your JavaScript logic here
+  const filterInput = document.getElementById('form1');
+  const buttons = document.querySelectorAll('.lii');
+
+  filterInput.addEventListener('input', function () {
+    const filterText = this.value.toLowerCase();
+
+    buttons.forEach(button => {
+      const buttonText = button.querySelector('.action').textContent.toLowerCase();
+      button.style.display = buttonText.includes(filterText) ? 'flex' : 'none';
+    });
+  });
+
+    // Form validation
+    function toggleHint(inputId) {
+      var hint = document.getElementById(inputId + 'Hint');
+      var isVisible = hint.getAttribute('data-visible') === 'true';
+
+      if (!isVisible) {
+        hint.style.display = 'block';
+        hint.setAttribute('data-visible', 'true');
+      } else {
+        hint.style.display = 'none';
+        hint.setAttribute('data-visible', 'false');
+      }
+    }
+
+    function validateForm() {
+      var name = document.getElementById('name').value;
+      var gender = document.getElementById('gender').value;
+      var status = document.querySelector('input[name="status"]:checked');
+      var file = document.getElementById('file').value;
+
+    
+      if (name.trim() === "") {
+        document.getElementById('nameError').innerText = "Please enter your name.";
+       
+      }
+      if (gender === "") {
+        document.getElementById('genderError').innerText = "Please select your gender.";
+        
+      }
+      if (!status) {
+        document.getElementById('statusError').innerText = "Please choose your status.";
+        
+      }
+      if (file.trim() === "") {
+        document.getElementById('fileError').innerText = "Please upload a file.";
+       
+      }
+
+      if (name.trim() === "" || gender === "" || !status || file.trim() === "") {
+        // Display a general error message
+        // alert("Please fill out all fields.");
+      } else {
+        // Form submission logic can be added here
+        // alert("Form submitted successfully!");
+        document.getElementById('myForm').submit(); // Uncomment this line to submit the form
+      }
+    }
+    // Form validation
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
