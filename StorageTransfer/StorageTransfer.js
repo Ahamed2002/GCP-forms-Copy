@@ -117,6 +117,9 @@
       var Zone = document.getElementById("zone");
       var SourecBucketname = document.getElementById("sourecBucketName");
       var Destinationname = document.getElementById("destinationName");
+      var SourceObject = document.querySelector('input[name="source"]:checked');
+      var Sink = document.querySelector('input[name="sink"]:checked');
+      var Monthdate = document.getElementById('MonthDate').value;
     
 
 
@@ -127,8 +130,23 @@
       SourecBucketName(SourecBucketname);
       DestinationName(Destinationname);
     // Source Object Name
+    if (!SourceObject) {
+      document.getElementById('SourceObjectError').innerText = "Please fill the box.";
+      document.getElementById('SourceObjectHint').style.display = 'block';
+      document.getElementById('SourceObjectHint').setAttribute('data-visible', 'true');
+    }
     // Sink Object Delete
+    if (!Sink) {
+      document.getElementById('SinkError').innerText = "Please fill the box.";
+      document.getElementById('SinkHint').style.display = 'block';
+      document.getElementById('SinkHint').setAttribute('data-visible', 'true');
+    }
     // Month/Date/Year
+    if (Monthdate.trim() === "") {
+      document.getElementById('dateError').innerText = "Please select a date.";
+      document.getElementById('dateHint').style.display = 'block';
+      document.getElementById('dateHint').setAttribute('data-visible', 'true');
+  }
 
 
 
@@ -140,7 +158,7 @@
       var destinationNameError = document.getElementById("DestinationNameError").textContent;
 
 
-      if (RepoNameError.trim() !== "" || PatError.trim() !== "" || RegionError.trim() !== "" || ZoneError.trim() !== "" || sourecBucketNameError.trim() !== "" || destinationNameError.trim() !== "" ) {
+      if (RepoNameError.trim() !== "" || PatError.trim() !== "" || RegionError.trim() !== "" || ZoneError.trim() !== "" || sourecBucketNameError.trim() !== "" || destinationNameError.trim() !== "" || Monthdate.trim() === "") {
         return false;
       }
       return true;

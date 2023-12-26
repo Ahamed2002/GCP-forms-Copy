@@ -144,7 +144,8 @@
             <label for="reponame" class="form-label col-sm-3">Repository Name</label>
             <div class="col-sm-5">
               <div class="input-group">
-                <input type="text" class="form-control" id="reponame" style="border-radius: 5px;" onkeyup="repository(this)">
+                <input type="text" class="form-control" id="reponame" style="border-radius: 5px;"
+                  onkeyup="repository(this)">
                 <i class="fas fa-info-circle input-group-text hint-icon fs-5" onclick="toggleHint('reponame')"></i>
               </div>
               <div id="reponameHint" class="hint-text text-muted" data-visible="false">A repository is the most basic
@@ -157,7 +158,8 @@
             <label for="pat" class="form-label col-sm-3">Personal Access Token</label>
             <div class="col-5">
               <div class="input-group">
-                <input type="text" class="form-control" id="pat" style="border-radius: 5px;" onkeyup="PersonalAccessToken(this)">
+                <input type="text" class="form-control" id="pat" style="border-radius: 5px;"
+                  onkeyup="PersonalAccessToken(this)">
                 <i class="fas fa-info-circle input-group-text hint-icon fs-5" onclick="toggleHint('pat')"></i>
               </div>
               <div id="patHint" class="hint-text text-muted" data-visible="false">A Git personal access token (PAT) is a
@@ -173,8 +175,9 @@
             <label for="region" class="form-label col-sm-3">Region</label>
             <div class="col-sm-5">
               <div class="input-group">
-                <select class="form-select" autocomplete="off" id="region" style="border-radius: 5px;" onkeyup="region(this)">
-                  <option value="none" style="display:none;"></option>
+                <select class="form-select" autocomplete="off" id="region" style="border-radius: 5px;"
+                  onkeyup="region(this)">
+                  <option value="" style="display:none;"></option>
                   <option name="option" value="us-west-1">us-west-1</option>
                   <option name="option" value="asia-south1">asia-south1</option>
                   <option name="option" value="asia-south2">asia-south2</option>
@@ -262,7 +265,7 @@
             <div class="col-sm-5">
               <div class="input-group">
                 <select class="form-select" id="zone" style="border-radius: 5px;" onkeyup="zone(this)">
-                  <option value="none" style="display:none"></option>
+                  <option value="" style="display:none"></option>
                   <option name="option" value="us-west1">us-west1</option>
                   <option name="option" value="us-west1">us-west1</option>
                   <option name="option" value="us-west2">us-west2</option>
@@ -514,7 +517,8 @@
             <label for="repositoryid" class="form-label col-sm-3">Repository ID</label>
             <div class="col-sm-5">
               <div class="input-group">
-                <input type="text" class="form-control" id="repositoryid" onkeyup="RepoID(this)" style="border-radius: 5px;">
+                <input type="text" class="form-control" id="repositoryid" onkeyup="RepoID(this)"
+                  style="border-radius: 5px;">
                 <i class="fas fa-info-circle input-group-text hint-icon fs-5" onclick="toggleHint('repositoryid')"></i>
               </div>
               <div id="repositoryidHint" class="hint-text text-muted" data-visible="false">The last part of the

@@ -145,8 +145,8 @@ function validateForm() {
     var Region = document.getElementById("region");
     var Zone = document.getElementById("zone");
     var Datasetid = document.getElementById("datasetid");
-    var Shell = document.getElementById("shell");
-    var Bucket = document.getElementById("bucket");
+    var friendlyname = document.getElementById("Friendlyname");
+    var tableID = document.getElementById("TableId");
     var timePartitioning = document.getElementById("TimePartitioning");
 
 
@@ -155,8 +155,8 @@ function validateForm() {
     region(Region);
     zone(Zone);
     DatasetID(Datasetid);
-    FriendlyName(Shell);
-    TableID(Bucket);
+    FriendlyName(friendlyname);
+    TableID(tableID);
     TimePartitioning(timePartitioning);
 
 
@@ -171,7 +171,7 @@ function validateForm() {
     var TimePartitioningError = document.getElementById("timePartitioningError").textContent;
 
 
-    if (RepoNameError.trim() !== "" || PatError.trim() !== "" || RegionError.trim() !== "" || ZoneError.trim() !== "" || ServiceNameError.trim() !== "" || RuntimeError.trim() !== "" || ShellError.trim() !== "" || BucketError.trim() !== "") {
+    if (RepoNameError.trim() !== "" || PatError.trim() !== "" || RegionError.trim() !== "" || ZoneError.trim() !== "" || DatasetIDError.trim() !== "" || FriendlyNameError.trim() !== "" || TableIDError.trim() !== "" || TimePartitioningError.trim() !== "") {
         return false;
     }
     return true;

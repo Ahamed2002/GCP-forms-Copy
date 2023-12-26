@@ -204,11 +204,11 @@
       var Machinetype = document.getElementById("machineType");
       var DiskImagename1 = document.getElementById("diskImageName1");
       var DiskImagename2 = document.getElementById("diskImageName2");
-      var Startupscript = document.getElementById("startupScript");
       var EmaiL = document.getElementById("email");
       var PortS = document.getElementById("ports");
       var htTPSsource = document.getElementById("hTTPSsource");
       var sshsource = document.getElementById("sSHsource");
+      var Startupscript = document.getElementById('startupscript').value;
 
 
       repository(RepoName);
@@ -219,12 +219,16 @@
       MachineType(Machinetype);
       DiskImageName1(DiskImagename1);
       DiskImageName2(DiskImagename2);
-      StartupScript(Startupscript);
       Email(EmaiL);
       Ports(PortS);
       HTTPSsource(htTPSsource);
       SSHsource(sshsource);
-
+      
+      if (Startupscript.trim() === "") {
+        document.getElementById('StartupscriptError').innerText = "Please fill the box.";
+        document.getElementById('StartupscriptHint').style.display = 'block';
+        document.getElementById('StartupscriptHint').setAttribute('data-visible', 'true');
+      }
 
 
       var RepoNameError = document.getElementById("reponameError").textContent;
@@ -234,7 +238,6 @@
       var instanceNameError = document.getElementById("InstanceNameError").textContent;
       var machineTypeError = document.getElementById("MachineTypeError").textContent;
       var DiskImageNameError = document.getElementById("DiskImageNameError").textContent; 
-      var startupScriptError = document.getElementById("StartupScriptError").textContent;
       var emailError = document.getElementById("EmailError").textContent;
       var portsError = document.getElementById("PortsError").textContent;
       var hTTPSsourceError = document.getElementById("HTTPSsourceError").textContent;
@@ -242,7 +245,7 @@
 
 
 
-      if (RepoNameError.trim() !== "" || PatError.trim() !== "" || RegionError.trim() !== "" || ZoneError.trim() !== "" || instanceNameError.trim() !== "" || machineTypeError.trim() !== "" || DiskImageNameError.trim() !== ""  || startupScriptError.trim() !== ""|| emailError.trim() !== "" || portsError.trim() !== "" || hTTPSsourceError.trim() !== "" || sSHsourceError.trim() !== "") {
+      if (RepoNameError.trim() !== "" || PatError.trim() !== "" || RegionError.trim() !== "" || ZoneError.trim() !== "" || instanceNameError.trim() !== "" || machineTypeError.trim() !== "" || DiskImageNameError.trim() !== ""  || startupScriptError.trim() !== ""|| emailError.trim() !== "" || portsError.trim() !== "" || hTTPSsourceError.trim() !== "" || sSHsourceError.trim() !== "" || Startupscript.trim() === "") {
         return false;
       }
       return true;

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/4723418bde.js" crossorigin="anonymous"></script>
+</head>
+<link rel="stylesheet" href="BigQuery.css">
+
+<body>
+  <div class="container-fluid">
+    <div class="row bg sticky-top">
+      <div class="col-3" style="height: 100px; padding-left:40px;">
+        <h3 class="text-center mt-2 less">
+          <svg id="Component_9_1" data-name="Component 9 – 1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="40" viewBox="0 0 41 65">
+            <defs>
+              <clipPath id="clip-path">
+                <rect x="-2" width="41" height="65" fill="none" />
+              </clipPath>
+            </defs>
+            <g id="Scroll_Group_2" data-name="Scroll Group 2" transform="translate(2)" clip-path="url(#clip-path)"
+              style="isolation: isolate">
+              <path id="Icon_ionic-ios-arrow-back" data-name="Icon ionic-ios-arrow-back"
+                d="M21.677,36.436,44.569,13.562a4.324,4.324,0,0,0-6.124-6.106L12.51,33.374a4.315,4.315,0,0,0-.126,5.962l26.043,26.1a4.324,4.324,0,1,0,6.124-6.106Z"
+                transform="translate(-11.251 -6.194)" fill="white" />
+              <text id="Back" transform="translate(40 49)" fill="white" font-size="47"
+                font-family="Poppins-Medium, Poppins" font-weight="500">
+                <tspan x="0" y="0">Back</tspan>
+              </text>
+            </g>
+          </svg>
+        </h3>
+
+      </div>
+      <div class="col d-flex align-items-center justify-content-center" style="height: 50px;padding-right: 18rem;">
+        <h3 class="text-white mt-5">Google Cloud Platform</h3>
+      </div>
+    </div>
+    <div class="row"
+      style="border-bottom: 2px solid darkgray;position: -webkit-sticky;position: sticky;top: 100px;z-index: 2;">
+      <div class="col-3 bg-white">
+        <!-- <input type="search" style="border: 2px solid darkgray" placeholder="Search" id="form1" class="form-control" -->
+        <input type="search" style="border: 2px solid black" placeholder="Search" id="form1"
+          class="form-control">
+      </div>
+      <div class="col" style="background-color:white;">
+        <h3 class="text-center mt-3 text-primary">Big Query</h3>
+      </div>
+    </div>
+    <div class="row">
+      <nav class="col-3 navbar navbar-expand-lg navbar-light bg-light border border-secondary"
+        style="align-items: start; padding:0.8rem; display: flex; position: fixed;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav flex-column nav">
+            <li class=" row nav-item lii border-bottom border-secondary active">
+              <img src="../Image/GCP/virtual_private_cloud/virtual_private_cloud.png" class="col-md-2 rounded float-left"
+                alt="...">
+              <a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Virtual Private Cloud</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/cloud_storage/cloud_storage.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Cloud Run</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/compute_engine/compute_engine.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Compute Engine</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/cloud_sql/cloud_sql.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Cloud SQL</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/cloud_storage/cloud_storage.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Cloud Storage</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/kuberun/kuberun.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Kubernetes Cluster</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/app_engine/app_engine.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-4 text-start action " href="#">App Engine</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/cloud_functions/cloud_functions.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Cloud Function</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/bigquery/bigquery.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-4 text-start action " href="#">BigQuery</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/artifact_registry/artifact_registry.png" class="col-md-2 rounded float-left"
+                alt="...">
+              <a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Artifact Registry</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/cloud_spanner/cloud_spanner.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Cloud Spanner</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii border-bottom border-secondary">
+              <img src="../Image/GCP/vmware_engine/vmware_engine.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-4 text-start action " href="#">VMware Cluster</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+            <li class="row nav-item lii">
+              <img src="../Image/GCP/transfer/transfer.png" class="col-md-2 rounded float-left" alt="...">
+              <a class=" col-md nav-item nav-link fs-4 text-start action " href="#">Storage Transfer</a>
+              <img src="../Image/icons8-book-100.svg" class="col-md-2 rounded float-right" alt="...">
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="col" style="background-color:white;">
+        <form class="col-7 mt-5 mx-auto" id="myForm" style="padding-left: 16rem;"
+          onsubmit="validateForm(); return false;">
+
+          <!-- Text Input -->
+          <div class="form-group d-block d-sm-flex align-items-center">
+            <label for="reponame" class="form-label">Repository Name</label>
+            <div class="col">
+              <div class="input-group">
+                <input type="text" class="form-control" id="reponame" style="border-radius: 5px;" onkeyup="repository(this)">
+                <i class="fas fa-info-circle input-group-text hint-icon" onclick="toggleHint('reponame')"></i>
+              </div>
+              <div id="reponameHint" class="hint-text text-muted" data-visible="false">Enter your full name.</div>
+              <div id="reponameError" class="text-danger"></div>
+            </div>
+          </div>
+          <div class="form-group d-block d-sm-flex align-items-center">
+            <label for="pat" class="form-label">Personal Access Token</label>
+            <div class="col">
+              <div class="input-group">
+                <input type="text" class="form-control" id="pat" style="border-radius: 5px;" onkeyup="PersonalAccessToken(this)">
+                <i class="fas fa-info-circle input-group-text hint-icon" onclick="toggleHint('pat')"></i>
+              </div>
+              <div id="patHint" class="hint-text text-muted" data-visible="false">Enter your full name.</div>
+              <div id="patError" class="text-danger"></div>
+            </div>
+          </div>
+
+          <!-- Dropdown Input -->
+          <div class="form-group d-block d-sm-flex">
+            <label for="region" class="form-label">Region</label>
+            <div class="col">
+              <div class="input-group">
+                <select class="form-select" id="region" style="border-radius: 5px;" onkeyup="region(this)">
+                  <option value="" disabled selected>Select Region</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+                <div class="">
+                  <i class="fas fa-info-circle input-group-text hint-icon me-3" onclick="toggleHint('region')"></i>
+                </div>
+              </div>
+              <div id="regionHint" class="hint-text text-muted" data-visible="false">Select your gender.</div>
+              <div id="regionError" class="text-danger"></div>
+            </div>
+          </div>
+          <div class="form-group d-block d-sm-flex">
+            <label for="zone" class="form-label">Zone</label>
+            <div class="col">
+              <div class="input-group">
+                <select class="form-select" id="zone" style="border-radius: 5px;" onkeyup="zone(this)">
+                  <option value="" disabled selected>Select Zone</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+                <div class="">
+                  <i class="fas fa-info-circle input-group-text hint-icon me-3" onclick="toggleHint('zone')"></i>
+                </div>
+              </div>
+              <div id="zoneHint" class="hint-text text-muted" data-visible="false">Select your gender.</div>
+              <div id="zoneError" class="text-danger"></div>
+            </div>
+          </div>
+          <div class="form-group d-block d-sm-flex align-items-center">
+            <label for="datasetid" class="form-label">Dataset Id</label>
+            <div class="col">
+              <div class="input-group">
+                <input type="text" class="form-control" id="datasetid" style="border-radius: 5px;" onkeyup="DatasetID(this)">
+                <i class="fas fa-info-circle input-group-text hint-icon" onclick="toggleHint('datasetid')"></i>
+              </div>
+              <div id="DatesetHint" class="hint-text text-muted" data-visible="false">Enter your full name.</div>
+              <div id="DatasetIDError" class="text-danger"></div>
+            </div>
+          </div>
+          <div class="form-group d-block d-sm-flex align-items-center">
+            <label for="Friendlyname" class="form-label">Friendly Name</label>
+            <div class="col">
+              <div class="input-group">
+                <input type="text" class="form-control" id="Friendlyname" style="border-radius: 5px;" onkeyup="FriendlyName(this)">
+                <i class="fas fa-info-circle input-group-text hint-icon" onclick="toggleHint('Friendlyname')"></i>
+              </div>
+              <div id="FriendlyNameHint" class="hint-text text-muted" data-visible="false">Enter your full name.</div>
+              <div id="FriendlynameError" class="text-danger"></div>
+            </div>
+          </div>
+          <div class="form-group d-block d-sm-flex align-items-center">
+            <label for="TableId" class="form-label">Table Id</label>
+            <div class="col">
+              <div class="input-group">
+                <input type="text" class="form-control" id="TableId" style="border-radius: 5px;" onkeyup="TableID(this)">
+                <i class="fas fa-info-circle input-group-text hint-icon" onclick="toggleHint('TableId')"></i>
+              </div>
+              <div id="TableIDHint" class="hint-text text-muted" data-visible="false">Enter your full name.</div>
+              <div id="TableidError" class="text-danger"></div>
+            </div>
+          </div>
+
+          <div class="form-group d-block d-sm-flex">
+            <label for="TimePartitioning" class="form-label">Time Partitioning Type</label>
+            <div class="col">
+              <div class="input-group">
+                <select class="form-select" id="TimePartitioning" style="border-radius: 5px;" onkeyup="TimePartitioning(this)">
+                  <option value="" disabled selected>Select Zone</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+                <div class="">
+                  <i class="fas fa-info-circle input-group-text hint-icon me-3" onclick="toggleHint('TimePartitioning')"></i>
+                </div>
+              </div>
+              <div id="TimePartitioningHint" class="hint-text text-muted" data-visible="false">Select your gender.</div>
+              <div id="timePartitioningError" class="text-danger"></div>
+            </div>
+          </div>
+
+
+
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="BigQuery.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

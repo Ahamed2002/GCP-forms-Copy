@@ -100,10 +100,10 @@
       // var categoryError = document.getElementById('category_error');
 
       if (selectedValue === "") {
-        document.getElementById("FormatError").textContent =
+        document.getElementById("formatError").textContent =
           "Please select a Format.";
       } else {
-        document.getElementById("FormatError").textContent = "";
+        document.getElementById("formatError").textContent = "";
       }
     }
 

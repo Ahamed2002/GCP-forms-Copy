@@ -184,9 +184,16 @@
       var configError = document.getElementById("ConfigError").textContent;
       var dBdialectError = document.getElementById("DBdialectError").textContent;
       var numcodeError = document.getElementById("NumcodeError").textContent;
+      var Delection = document.querySelector('input[name="status"]:checked');
+
+      if (!Delection) {
+        document.getElementById('DelectionError').innerText = "Please fill the box.";
+        document.getElementById('DelectionHint').style.display = 'block';
+        document.getElementById('DelectionHint').setAttribute('data-visible', 'true');
+      }
 
 
-      if (RepoNameError.trim() !== "" || PatError.trim() !== "" || RegionError.trim() !== "" || ZoneError.trim() !== "" || spannerNameError.trim() !== "" || spannerDBnameError.trim() !== "" || configError.trim() !== "" || dBdialectError.trim() !== "" || numcodeError.trim() !== "") {
+      if (RepoNameError.trim() !== "" || PatError.trim() !== "" || RegionError.trim() !== "" || ZoneError.trim() !== "" || spannerNameError.trim() !== "" || spannerDBnameError.trim() !== "" || configError.trim() !== "" || dBdialectError.trim() !== "" || numcodeError.trim() !== "" || !Delection) {
         return false;
       }
       return true;
